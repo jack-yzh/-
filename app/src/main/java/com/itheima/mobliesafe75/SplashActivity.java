@@ -110,7 +110,6 @@ public class SplashActivity extends Activity {
 			//如果用户取消更新提醒，直接跳转到主界面
 		}
 
-       update();
     }
 	/**
 	 * 弹出对话框
