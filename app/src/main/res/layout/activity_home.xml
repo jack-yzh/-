@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_home_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="功能列表"
+        android:background="#8866ff00"
+        android:gravity="center_horizontal"
+        android:textSize="23sp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"/>
+    <com.itheima.mobliesafe75.ui.HomeTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="手机卫士，虎子制造，杀毒超级牛逼，更多强劲功能清激活此工具高级版！"
+        android:textSize="18sp"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:focusableInTouchMode="true"
+        android:marqueeRepeatLimit="marquee_forever"/>
+        <GridView
+            android:id="@+id/gv_home_girdview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:verticalSpacing="30dp"
+            android:paddingTop="15dp"/>
+        <!--android:numColumns:每行显示个数
+            verticalSpacing:每行的距离-->
+
+
+</LinearLayout>
