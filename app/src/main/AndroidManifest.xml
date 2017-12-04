@@ -29,6 +29,11 @@
         </activity>
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".SettingActivity"></activity>
+        <activity android:name=".LostfindActivity"></activity>
+        <activity android:name=".ui.GuideView"></activity>
+        <activity android:name=".ui.Guide2View"></activity>
+        <activity android:name=".ui.Guide3View"></activity>
+        <activity android:name=".ui.Guide4View"></activity>
     </application>
 
 </manifest>
