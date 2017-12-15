@@ -13,13 +13,10 @@ import com.itheima.mobliesafe75.R;
 
 public class Guide4View extends GuideBaseActivity {
 
-    private SharedPreferences sp;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.guide_view4);
-        sp = getSharedPreferences("config",MODE_PRIVATE);
     }
 
     @Override

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 
 import com.itheima.mobliesafe75.ui.GuideView;
 
@@ -27,5 +28,11 @@ public class LostfindActivity extends Activity {
         }else{
 
         }
+    }
+
+    public void turnGuideView(View v){
+        Intent intent = new Intent(this,GuideView.class);
+        startActivity(intent);
+        finish();
     }
 }

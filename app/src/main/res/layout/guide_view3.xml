@@ -26,16 +26,20 @@
         android:gravity="center_vertical"
         android:layout_margin="5dp"/>
     <EditText
+        android:id="@+id/et_guideview3_safenum"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="请输入安全号码"
         android:textColor="@color/black"/>
+
     <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="选择联系人"
+        android:background="@drawable/select_contect_button"
         android:gravity="center"
-        android:background="@drawable/select_contect_button"/>
+        android:text="选择联系人"
+        android:onClick="selectContacts"/>
 
     <LinearLayout
         android:layout_width="wrap_content"

@@ -27,6 +27,7 @@
         android:gravity="center_vertical"
         android:layout_margin="5dp"/>
     <com.itheima.mobliesafe75.ui.SettingView
+        android:id="@+id/sv_guideview2_sim"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         itheima:title="点击绑定SIM卡"

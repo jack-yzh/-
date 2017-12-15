@@ -1,6 +1,7 @@
 package com.itheima.mobliesafe75.ui;
 
 import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.KeyEvent;
@@ -14,10 +15,12 @@ import android.view.View;
 public abstract class GuideBaseActivity extends Activity {
 
     private GestureDetector gestureDetector;
+    protected SharedPreferences sp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        sp = getSharedPreferences("config",MODE_PRIVATE);
         //获取手势识别器
         gestureDetector = new GestureDetector(this,new MyOnGestureListener());
     }
@@ -30,7 +33,7 @@ public abstract class GuideBaseActivity extends Activity {
             float endX = e2.getRawX();
             float startY = e1.getRawY();
             float endY = e2.getRawY();
-            if ((Math.abs(startY-endY)>50)){
+            if ((Math.abs(startY-endY)>200)){
                 return false;
             }
             if ((startX-endX)>100){
