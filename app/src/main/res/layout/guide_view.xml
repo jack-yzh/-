@@ -20,7 +20,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SIM卡变更报警"
+        android:text="GPS追踪#*location*#"
         android:textSize="18sp"
         android:drawableLeft="@android:drawable/star_big_on"
         android:gravity="center_vertical"
@@ -28,7 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GPS追踪"
+        android:text="播放报警音乐#*alarm*#"
         android:textSize="18sp"
         android:drawableLeft="@android:drawable/star_big_on"
         android:gravity="center_vertical"
@@ -36,7 +36,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="远程数据销毁"
+        android:text="远程数据销毁#*wipedata*#"
         android:textSize="18sp"
         android:drawableLeft="@android:drawable/star_big_on"
         android:gravity="center_vertical"
@@ -44,7 +44,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="远程锁屏"
+        android:text="远程锁屏#*lockscreen*#"
         android:textSize="18sp"
         android:drawableLeft="@android:drawable/star_big_on"
         android:gravity="center_vertical"

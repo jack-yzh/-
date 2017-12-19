@@ -1,5 +1,6 @@
 package com.itheima.mobliesafe75.ui;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -20,6 +21,8 @@ public class Guide3View extends GuideBaseActivity {
 
     private EditText et_guideview3_safenum;
     private Button selectContacts;
+    public Context context;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

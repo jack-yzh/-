@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.itheima.mobliesafe75.ui.GuideView;
 
@@ -15,6 +17,9 @@ import com.itheima.mobliesafe75.ui.GuideView;
 
 public class LostfindActivity extends Activity {
     private SharedPreferences sp;
+    private TextView tv_lostfind_safenum;
+    private ImageView iv_lostfind_protected;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lostfind);
@@ -26,7 +31,18 @@ public class LostfindActivity extends Activity {
             startActivity(intent);
             finish();
         }else{
-
+            //setContentView(R.layout.activity_lostfind);
+            tv_lostfind_safenum = (TextView)findViewById(R.id.tv_lostfind_safenum);
+            iv_lostfind_protected = (ImageView)findViewById(R.id.iv_lostfind_protected);
+            //根据保存的安全号码显示出来
+            tv_lostfind_safenum.setText(sp.getString("safenum",""));
+            //根据保存的状态显示图片
+            boolean b = sp.getBoolean("protected",false);
+            if (b){
+                iv_lostfind_protected.setImageResource(R.drawable.lock);
+            }else{
+                iv_lostfind_protected.setImageResource(R.drawable.unlock);
+            }
         }
     }
 

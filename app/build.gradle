@@ -8,6 +8,7 @@ android {
         applicationId "com.itheima.mobliesafe75"
         minSdkVersion 14
         targetSdkVersion 17
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -19,6 +20,10 @@ android {
 }
 
 dependencies {
+    testCompile 'junit:junit:4.12'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
     compile 'com.android.support:support-v4:19.1.0'
     compile 'org.xutils:xutils:3.5.0'
 

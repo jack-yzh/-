@@ -24,6 +24,7 @@
             android:layout_margin="5dp"
             android:textSize="18sp"/>
         <TextView
+            android:id="@+id/tv_lostfind_safenum"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="5556"
@@ -44,11 +45,12 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="放到保护是否开启"
+            android:text="防盗保护是否开启"
             android:layout_margin="5dp"
             android:textSize="18sp"
             />
         <ImageView
+            android:id="@+id/iv_lostfind_protected"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/unlock"
