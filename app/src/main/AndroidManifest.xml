@@ -9,7 +9,7 @@
 	-->
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="24" />
+        android:targetSdkVersion="17" />
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
@@ -19,13 +19,17 @@
     <uses-permission android:name="android.permission.RECEIVE_SMS"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme"
+        android:name=".MyApplication">
         <activity
             android:name="com.itheima.mobliesafe75.SplashActivity"
             android:label="@string/app_name" >
@@ -43,6 +47,10 @@
         <activity android:name=".ui.Guide3View"></activity>
         <activity android:name=".ui.Guide4View"></activity>
         <activity android:name=".ContactActivity"></activity>
+        <activity android:name=".AToolsActivity"></activity>
+        <activity android:name=".AddressActivity"></activity>
+        <activity android:name=".DragActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
 
 
         <receiver android:name=".receiver.BootCompleteReceiver">
@@ -68,16 +76,13 @@
                 android:name="android.app.device_admin"
                 android:resource="@xml/device_admin_sample"/>
             <intent-filter>
-                <action android:name="android.action.DEVICE_ADMIN_ENABLED"/>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
             </intent-filter>
 
         </receiver>
 
-
-
-
-
         <service android:name=".service.GPSService"/>
+        <service android:name=".service.AddressService"/>
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
+import android.content.res.AssetManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -26,10 +27,12 @@ import com.itheima.mobliesafe75.utils.StreamUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.xutils.common.Callback;
+import org.xutils.common.util.IOUtil;
 import org.xutils.http.RequestParams;
 import org.xutils.x;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.HttpURLConnection;
@@ -83,6 +86,7 @@ public class SplashActivity extends Activity {
 	private TextView tv_spalsh_plan;
 	private SharedPreferences sp;
 
+
 	@TargetApi(Build.VERSION_CODES.HONEYCOMB)
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,8 +113,42 @@ public class SplashActivity extends Activity {
 			}.start();
 			//如果用户取消更新提醒，直接跳转到主界面
 		}
-
+		copyDb();
+//		//开启监听电话服务
+//		Intent intent = new Intent(this, AddressService.class);
+//		startService(intent);
     }
+//拷贝库文件
+	private void copyDb() {
+		//创建新文件
+		File file = new File(getFilesDir(),"address.db");
+		//判断文件是否存在
+		if (!file.exists()){
+			//将文件从资源文件中拷贝出来
+			AssetManager am = getAssets();
+			InputStream is = null;
+			FileOutputStream out = null;
+			try {
+				is = am.open("address.db");
+				out = new FileOutputStream(file);
+				byte[] b = new byte[1024];
+				int len = -1;
+				while((len = is.read(b))!=-1){
+					out.write(b,0,len);
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}finally {
+//			is.close();
+//			out.close();
+				IOUtil.closeQuietly(is);
+				IOUtil.closeQuietly(out);
+
+			}
+		}
+
+	}
+
 	/**
 	 * 弹出对话框
 	 */

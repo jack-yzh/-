@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:background="@drawable/call_locate_green">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"/>
+    <TextView
+        android:id="@+id/tv_toastcustom_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="福建移动"
+        android:textSize="18sp"/>
+</LinearLayout>

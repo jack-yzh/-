@@ -18,7 +18,26 @@
         itheima:title="提示更新"
         itheima:des_on="打开提示更新"
         itheima:des_off="关闭提示更新">
-
     </com.itheima.mobliesafe75.ui.SettingView>
 
+    <com.itheima.mobliesafe75.ui.SettingView
+        android:id="@+id/sv_setting_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        itheima:title="显示号码归属地"
+        itheima:des_on="打开显示号码归属地"
+        itheima:des_off="关闭显示号码归属地">
+    </com.itheima.mobliesafe75.ui.SettingView>
+
+    <com.itheima.mobliesafe75.ui.SettingClickView
+        android:id="@+id/scv_setting_changebg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.itheima.mobliesafe75.ui.SettingClickView>
+
+    <com.itheima.mobliesafe75.ui.SettingClickView
+        android:id="@+id/scv_setting_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.itheima.mobliesafe75.ui.SettingClickView>
 </LinearLayout>

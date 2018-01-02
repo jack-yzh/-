@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#aa000000">
+    <TextView
+        android:id="@+id/tv_dragview_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按住提示框拖到任意位置\n按手机返回键生效"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/call_locate_green"/>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_dragview_toast"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:background="@drawable/call_locate_green">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_toastcustom_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="双击居中"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_dragview_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="按住提示框拖到任意位置\n按手机返回键生效"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:background="@drawable/call_locate_green"/>
+</RelativeLayout>

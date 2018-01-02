@@ -46,7 +46,10 @@ public class HomeActivity extends Activity {
 						}else{
 							showEnterPasswordDialog();
 						}
-
+						break;
+					case 7:
+						Intent atoolsintent = new Intent(HomeActivity.this,AToolsActivity.class);
+						startActivity(atoolsintent);
 						break;
                     case 8:
                         Intent intent = new Intent(HomeActivity.this,SettingActivity.class);
