@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.itheima.mobliesafe75.ui.CallSmsSafeActivity;
 import com.itheima.mobliesafe75.utils.MD5Util;
 
 public class HomeActivity extends Activity {
@@ -46,6 +47,10 @@ public class HomeActivity extends Activity {
 						}else{
 							showEnterPasswordDialog();
 						}
+						break;
+					case 1:
+						Intent callsmssafe = new Intent(HomeActivity.this, CallSmsSafeActivity.class);
+						startActivity(callsmssafe);
 						break;
 					case 7:
 						Intent atoolsintent = new Intent(HomeActivity.this,AToolsActivity.class);

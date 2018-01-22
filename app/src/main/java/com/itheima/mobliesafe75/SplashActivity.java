@@ -279,12 +279,12 @@ public class SplashActivity extends Activity {
 	protected void installAPK() {
 		/**
 		 *  <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <data android:scheme="content" /> //content : 从内容提供者中获取数据  content://
-                <data android:scheme="file" /> // file : 从文件中获取数据
-                <data android:mimeType="application/vnd.android.package-archive" />
-            </intent-filter>
+		 <action android:name="android.intent.action.VIEW" />
+		 <category android:name="android.intent.category.DEFAULT" />
+		 <data android:scheme="content" /> //content : 从内容提供者中获取数据  content://
+		 <data android:scheme="file" /> // file : 从文件中获取数据
+		 <data android:mimeType="application/vnd.android.package-archive" />
+		 </intent-filter>
 		 */
 		Intent intent = new Intent(Intent.ACTION_VIEW);
 		//intent.setAction("android.intent.action.VIEW");

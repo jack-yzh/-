@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_itemcallsmssafe_blacknum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1223445556"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        />
+    <TextView
+        android:id="@+id/tv_itemcallsmssafe_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="电话拦截"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tv_itemcallsmssafe_blacknum"
+        />
+    <ImageView
+        android:id="@+id/iv_itemcallsmssafe_del"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_blacknumdel"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

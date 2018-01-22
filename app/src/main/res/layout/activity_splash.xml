@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/luncher_bg" >
+    android:background="@drawable/bg" >
 
     <!-- layout_centerInParent:在父控件的中间位置 
     shadow
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="版本号:1.0" 
-        android:shadowColor="#ffff00"
+        android:shadowColor="#ffffff"
         android:shadowDx="1"
         android:shadowDy="1"
         android:shadowRadius="2"

@@ -53,6 +53,7 @@ public abstract class GuideBaseActivity extends Activity {
     }
 
     //子控件的点击事件先在父类中执行，然后再执行子类实现的抽象方法
+
     public void next(View v){
         next_activity();
     }

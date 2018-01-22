@@ -51,6 +51,7 @@
         <activity android:name=".AddressActivity"></activity>
         <activity android:name=".DragActivity"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"></activity>
+        <activity android:name=".ui.CallSmsSafeActivity"/>
 
 
         <receiver android:name=".receiver.BootCompleteReceiver">
